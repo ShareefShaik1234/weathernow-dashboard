@@ -1,8 +1,11 @@
 # WeatherNow: City Weather Dashboard
 
-A responsive weather dashboard built as part of the SkillMe Web Development Internship.
+A responsive weather dashboard built as part of the SkillMe Full Stack Engineer Virtual Internship.
 
-## Week 1 Milestone
-- Semantic HTML5 structure with accessible search input
-- Modern Flexbox layout styled with CSS custom properties
-- Current weather overview card and 7-day forecast cards with horizontal scroll support
+## Features
+- **Week 1:** Semantic HTML5 layout, CSS custom properties, Flexbox current-weather card, and responsive 7-day forecast row.
+
+## Local Setup
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/ShareefShaik1234/weathernow-dashboard.git](https://github.com/ShareefShaik1234/weathernow-dashboard.git)
