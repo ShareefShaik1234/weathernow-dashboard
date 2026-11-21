@@ -28,99 +28,47 @@
       </form>
     </header>
 
+    <!-- Validation / Status Message -->
+    <p id="status-message" class="status-message" role="alert" aria-live="polite"></p>
+
     <main>
-      <!-- Large Current Weather Card -->
+      <!-- Large Current Weather Card (Populated by JS) -->
       <section class="current-weather-card" aria-label="Current Weather">
         <div class="current-main">
           <div class="city-info">
-            <h2 class="current-city">Madanapalle, IN</h2>
-            <p class="current-condition">Partly Cloudy</p>
+            <h2 class="current-city" id="current-city">Loading...</h2>
+            <p class="current-condition" id="current-condition">--</p>
           </div>
           <div class="temp-display">
-            <span class="current-emoji" aria-hidden="true">⛅</span>
-            <span class="current-temp">26°C</span>
+            <span class="current-emoji" id="current-emoji" aria-hidden="true">⛅</span>
+            <span class="current-temp" id="current-temp">--°C</span>
+            <button
+              type="button"
+              id="unit-toggle"
+              class="unit-toggle-btn"
+              aria-label="Toggle between Celsius and Fahrenheit"
+            >
+              °C | °F
+            </button>
           </div>
         </div>
 
         <div class="current-details">
           <div class="detail-item">
             <span class="detail-label">Wind Speed</span>
-            <span class="detail-value current-wind">14 km/h</span>
+            <span class="detail-value current-wind" id="current-wind">-- km/h</span>
           </div>
           <div class="detail-item">
             <span class="detail-label">Humidity</span>
-            <span class="detail-value current-humidity">62%</span>
+            <span class="detail-value current-humidity" id="current-humidity">--%</span>
           </div>
         </div>
       </section>
 
-      <!-- 7-Day Forecast Section -->
+      <!-- 7-Day Forecast Section (Cards Created by JS) -->
       <section class="forecast-section" aria-label="7-Day Forecast">
         <h3 class="section-title">7-Day Forecast</h3>
-        <div class="forecast-row" id="forecast-row">
-          <article class="forecast-card">
-            <span class="forecast-day">Thu</span>
-            <span class="forecast-icon" aria-hidden="true">☀️</span>
-            <div class="forecast-temps">
-              <span class="temp-max">28°</span>
-              <span class="temp-min">18°</span>
-            </div>
-          </article>
-
-          <article class="forecast-card">
-            <span class="forecast-day">Fri</span>
-            <span class="forecast-icon" aria-hidden="true">⛅</span>
-            <div class="forecast-temps">
-              <span class="temp-max">27°</span>
-              <span class="temp-min">17°</span>
-            </div>
-          </article>
-
-          <article class="forecast-card">
-            <span class="forecast-day">Sat</span>
-            <span class="forecast-icon" aria-hidden="true">🌧️</span>
-            <div class="forecast-temps">
-              <span class="temp-max">24°</span>
-              <span class="temp-min">16°</span>
-            </div>
-          </article>
-
-          <article class="forecast-card">
-            <span class="forecast-day">Sun</span>
-            <span class="forecast-icon" aria-hidden="true">🌦️</span>
-            <div class="forecast-temps">
-              <span class="temp-max">25°</span>
-              <span class="temp-min">16°</span>
-            </div>
-          </article>
-
-          <article class="forecast-card">
-            <span class="forecast-day">Mon</span>
-            <span class="forecast-icon" aria-hidden="true">☀️</span>
-            <div class="forecast-temps">
-              <span class="temp-max">29°</span>
-              <span class="temp-min">18°</span>
-            </div>
-          </article>
-
-          <article class="forecast-card">
-            <span class="forecast-day">Tue</span>
-            <span class="forecast-icon" aria-hidden="true">☀️</span>
-            <div class="forecast-temps">
-              <span class="temp-max">30°</span>
-              <span class="temp-min">19°</span>
-            </div>
-          </article>
-
-          <article class="forecast-card">
-            <span class="forecast-day">Wed</span>
-            <span class="forecast-icon" aria-hidden="true">☁️</span>
-            <div class="forecast-temps">
-              <span class="temp-max">26°</span>
-              <span class="temp-min">17°</span>
-            </div>
-          </article>
-        </div>
+        <div class="forecast-row" id="forecast-row"></div>
       </section>
     </main>
   </div>
