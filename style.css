@@ -304,3 +304,42 @@ body.theme-cloudy {
 body.theme-rain {
   background-color: #dbeafe;
 }
+/* Week 3 Additions: Loading Banner, Disabled Buttons & Geolocation Button */
+.search-btn:disabled,
+.location-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.location-btn {
+  padding: 0.65rem 0.85rem;
+  font-size: 1rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.location-btn:hover:not(:disabled) {
+  background-color: var(--bg-card-subtle);
+  border-color: var(--primary);
+}
+
+.status-message.loading {
+  display: block;
+  color: #1e40af;
+  background-color: #dbeafe;
+  border-color: #bfdbfe;
+}
+
+.status-message.error {
+  display: block;
+  color: #991b1b;
+  background-color: #fee2e2;
+  border-color: #fecaca;
+}
+
+body.theme-snow {
+  background-color: #f1f5f9;
+}
