@@ -24,15 +24,24 @@
           placeholder="Enter city name (e.g., Bengaluru, London)..."
           autocomplete="off"
         />
-        <button type="submit" class="search-btn">Search</button>
+        <button type="submit" id="search-btn" class="search-btn">Search</button>
+        <button
+          type="button"
+          id="location-btn"
+          class="location-btn"
+          title="Use my current location"
+          aria-label="Use my current location"
+        >
+          📍
+        </button>
       </form>
     </header>
 
-    <!-- Validation / Status Message -->
+    <!-- Loading, Error & Validation Banner -->
     <p id="status-message" class="status-message" role="alert" aria-live="polite"></p>
 
     <main>
-      <!-- Large Current Weather Card (Populated by JS) -->
+      <!-- Large Current Weather Card (Populated by Live API) -->
       <section class="current-weather-card" aria-label="Current Weather">
         <div class="current-main">
           <div class="city-info">
@@ -48,7 +57,7 @@
               class="unit-toggle-btn"
               aria-label="Toggle between Celsius and Fahrenheit"
             >
-              °C | °F
+              Switch to °F
             </button>
           </div>
         </div>
